@@ -1,0 +1,13 @@
+row_id,amount,predicted_probability,threshold,time_seconds,monitoring_use
+274771,25691.16,0.06891402486040567,0.053668899607021495,166198.0,high-value false positive for segment-level friction monitoring
+237192,1059.28,0.10661718915788693,0.053668899607021495,149133.0,high-value false positive for segment-level friction monitoring
+229953,302.65,0.10727385933502909,0.053668899607021495,146124.0,high-value false positive for segment-level friction monitoring
+236412,9.86,0.07374105530771134,0.053668899607021495,148796.0,high-value false positive for segment-level friction monitoring
+274468,2.0,0.09978986542672627,0.053668899607021495,166023.0,high-value false positive for segment-level friction monitoring
+277772,1.99,0.15004616735537582,0.053668899607021495,167846.0,high-value false positive for segment-level friction monitoring
+277877,1.99,0.14313714446909015,0.053668899607021495,167912.0,high-value false positive for segment-level friction monitoring
+239473,1.0,0.09233552732790952,0.053668899607021495,150125.0,high-value false positive for segment-level friction monitoring
+277737,1.0,0.1561280236232204,0.053668899607021495,167826.0,high-value false positive for segment-level friction monitoring
+263355,0.77,0.05690670276246961,0.053668899607021495,160916.0,high-value false positive for segment-level friction monitoring
+263633,0.77,0.057014603342221165,0.053668899607021495,161046.0,high-value false positive for segment-level friction monitoring
+247348,0.0,0.054053723090487026,0.053668899607021495,153547.0,high-value false positive for segment-level friction monitoring

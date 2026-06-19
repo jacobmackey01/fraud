@@ -1,0 +1,4 @@
+-r requirements.txt
+scikit-learn>=1.5
+imbalanced-learn>=0.12
+matplotlib>=3.8
