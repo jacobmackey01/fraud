@@ -1,6 +1,6 @@
 # Credit Card Fraud Detection Project
 
-This is an end-to-end fraud detection project for the classic public credit-card fraud dataset. It trains imbalance-aware models, chooses an alert threshold from business cost or alert-capacity assumptions, and writes interpretation artifacts that explain what pushes transactions toward a fraud flag.
+This project analyzes the public ULB credit-card fraud dataset. It trains imbalance-aware models, chooses an alert threshold from business cost or alert-capacity assumptions, and writes interpretation artifacts that explain what pushes transactions toward a fraud flag.
 
 ## Dataset
 
@@ -41,7 +41,7 @@ python src/smoke_test.py
 
 ## Optional ML Packages
 
-The checked-in pipeline is runnable with NumPy and Pandas only, then automatically adds the boosted-tree challenger when scikit-learn is available. On a normal machine, install the usual ML stack with:
+The checked-in pipeline is runnable with NumPy and Pandas only, then automatically adds the boosted-tree challenger when scikit-learn is available. To enable the scikit-learn challenger, install the full ML dependencies:
 
 ```powershell
 python -m pip install -r requirements-full.txt
