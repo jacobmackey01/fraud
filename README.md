@@ -79,7 +79,7 @@ Fraud is rare enough that an "always legitimate" classifier can look excellent b
 
 [Validation precision–recall curve and untouched-test operating point](reports/fraud_operating_point.svg)
 
-*The threshold was selected on chronological validation data and applied once to the untouched chronological test set: 75 frauds across 56,962 transactions. Costs remain illustrative assumptions and no real fraud-review capacity was supplied. Final production threshold ownership belongs jointly to fraud operations, risk/finance, product and data science. V1–V28 are anonymised PCA components, not customer-facing reason codes; this is a portfolio case study, not a deployed bank fraud system.*
+*The threshold was selected on chronological validation data and applied once to the untouched chronological test set: 75 frauds across 56,962 transactions. Costs remain illustrative assumptions. No real fraud-review capacity was supplied. Final production threshold ownership belongs jointly to fraud operations, risk/finance, product and data science. V1–V28 are anonymised PCA components, not customer-facing reason codes; this is a portfolio case study, not a deployed bank fraud system.*
 
 ## Outputs
 
