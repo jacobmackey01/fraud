@@ -75,12 +75,19 @@ When scikit-learn is installed, the pipeline automatically adds a `HistGradientB
 
 Fraud is rare enough that an "always legitimate" classifier can look excellent by accuracy while catching no fraud. This project reports accuracy only as a cautionary baseline and uses precision, recall, F-scores, PR-AUC, and false positive rate for model selection.
 
+## Verified operating point
+
+[Validation precision–recall curve and untouched-test operating point](reports/fraud_operating_point.svg)
+
+*The threshold was selected on chronological validation data and applied once to the untouched chronological test set: 75 frauds across 56,962 transactions. Costs remain illustrative assumptions and no real fraud-review capacity was supplied. Final production threshold ownership belongs jointly to fraud operations, risk/finance, product and data science. V1–V28 are anonymised PCA components, not customer-facing reason codes; this is a portfolio case study, not a deployed bank fraud system.*
+
 ## Outputs
 
 After a real run, inspect:
 
 - `reports/model_report.md`
 - `reports/metrics_summary.csv`
+- `reports/fraud_operating_point.svg`
 - `reports/precision_recall_curve.svg`
 - `reports/feature_drivers.svg`
 - `artifacts/fraud_model.json`
@@ -88,6 +95,12 @@ After a real run, inspect:
 - `interpretation/linear_log_odds_contributions_top_flags.csv`
 - `interpretation/high_value_false_positive_examples.csv`
 - `MONITORING.md`
+
+The operating-point figure is regenerated from the committed report artifacts with:
+
+```powershell
+python src/generate_operating_point_figure.py
+```
 
 ## Interpretation Note
 
