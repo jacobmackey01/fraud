@@ -374,8 +374,8 @@ def build_svg(evidence: OperatingPointEvidence) -> str:
     near_max = evidence.near_optimal["near_optimal_threshold_max"]
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="title description">
-  <title id="title">Fraud detection operating point</title>
-  <desc id="description">Validation precision-recall evidence and the single frozen-threshold result on the untouched chronological test set.</desc>
+  <title id="title">Fraud detection operating point — {_esc(evidence.model_name)}</title>
+  <desc id="description">Selected model: {_esc(evidence.model_name)}. Validation threshold: {evidence.threshold:.6f}. Untouched chronological test set: precision {_pct(evidence.test["precision"])}, recall {_pct(evidence.test["recall"])}, PR-AUC {evidence.test["average_precision"]:.4f}; {test_tp} true positives, {test_fp} false positives and {test_fn} false negatives.</desc>
   <defs>
     <pattern id="false-positive-pattern" width="8" height="8" patternUnits="userSpaceOnUse">
       <rect width="8" height="8" fill="#f0e1e8"/>
@@ -420,7 +420,7 @@ def build_svg(evidence: OperatingPointEvidence) -> str:
   {_text(476, 588, f"threshold {evidence.threshold:.6f}", size=13, fill="#3f4b51")}
   {_text(476, 606, f"precision {_pct(evidence.validation['precision'])} · recall {_pct(evidence.validation['recall'])}", size=13, fill="#3f4b51")}
   {_text(476, 624, f"validation PR-AUC {evidence.validation['average_precision']:.4f}", size=13, fill="#3f4b51")}
-  {_text(65, 585, "Precision: fewer legitimate transactions entering review", size=13, fill="#3f4b51")}
+  {_text(65, 585, "Higher precision means a larger share of alerts are fraud.", size=13, fill="#3f4b51")}
   {_text(65, 605, "Recall: fewer fraud transactions missed", size=13, fill="#3f4b51")}
   {_text(65, 654, f"Near-tie band: thresholds {near_min:.6f}–{near_max:.6f} stay within 5% of validation cost.", size=12, fill="#59666d")}
   {_text(65, 675, "Cost alone does not set the production point; capacity and minimum precision still need an operating decision.", size=12, fill="#59666d")}
