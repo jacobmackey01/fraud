@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title description">
-  <title id="title">Fraud detection operating point</title>
-  <desc id="description">Validation precision-recall evidence and the single frozen-threshold result on the untouched chronological test set.</desc>
+  <title id="title">Fraud detection operating point — unweighted_logistic</title>
+  <desc id="description">Selected model: unweighted_logistic. Validation threshold: 0.053669. Untouched chronological test set: precision 82.6%, recall 76.0%, PR-AUC 0.8075; 57 true positives, 12 false positives and 18 false negatives.</desc>
   <defs>
     <pattern id="false-positive-pattern" width="8" height="8" patternUnits="userSpaceOnUse">
       <rect width="8" height="8" fill="#f0e1e8"/>
@@ -45,7 +45,7 @@
   <text x="476.00" y="588.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">threshold 0.053669</text>
   <text x="476.00" y="606.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">precision 87.8% · recall 75.4%</text>
   <text x="476.00" y="624.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">validation PR-AUC 0.7718</text>
-  <text x="65.00" y="585.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">Precision: fewer legitimate transactions entering review</text>
+  <text x="65.00" y="585.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">Higher precision means a larger share of alerts are fraud.</text>
   <text x="65.00" y="605.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13px" font-weight="400" fill="#3f4b51">Recall: fewer fraud transactions missed</text>
   <text x="65.00" y="654.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12px" font-weight="400" fill="#59666d">Near-tie band: thresholds 0.032815–0.114460 stay within 5% of validation cost.</text>
   <text x="65.00" y="675.00" text-anchor="start" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12px" font-weight="400" fill="#59666d">Cost alone does not set the production point; capacity and minimum precision still need an operating decision.</text>
