@@ -87,8 +87,17 @@ class OperatingPointFigureTests(unittest.TestCase):
             self.assertIn("precision 75.0% · recall 75.0%", svg)
             self.assertIn("test precision", svg)
             self.assertIn("66.7%", svg)
+            self.assertIn("Selected model: unweighted_logistic.", svg)
+            self.assertIn("Higher precision means a larger share of alerts are fraud.", svg)
+            self.assertNotIn("Precision: fewer legitimate transactions entering review", svg)
             self.assertNotIn("test set is used only after", svg)
             self.assertNotIn("created_at", svg)
+
+    def test_committed_figure_matches_current_evidence(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            generated = render_operating_point_svg(ROOT, Path(directory) / "fraud_operating_point.svg")
+            committed = ROOT / "reports" / "fraud_operating_point.svg"
+            self.assertEqual(generated.read_bytes(), committed.read_bytes())
 
     def test_malformed_curve_probability_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
